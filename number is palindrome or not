@@ -12,9 +12,12 @@ while(n!=0)
     n=n/10;
 }
 if(temp==rev)
+{
 printf("palindrome");
+}
 else
+{
 printf("not a palindrome")
-
+}
 return 0;
 }
