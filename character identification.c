@@ -1,18 +1,21 @@
 #include<stdio.h>
-int main(){
-    char ch;
-    printf("enter a character");
-    scanf("%c",&ch);
+#include<math.h>
+int main()
+{
+    int binary,decimal=0;
+    int remainder,position=0;
+ printf("enter a binary number");
+ scanf("%d",& binary);
+  
+ while (binary!=0)
+ {
     
-    if((ch>='a'&& ch<='z')||(ch>='A'&& ch<='Z')){
-        printf("it is an alphabet.");
-    }
-    else if (ch>='0'&&ch<='9')
-    {
-        printf("it is a digit.");
-    }
-    else{
-        printf("it is a special character.");
-    }
-    return 0;
+ remainder=binary%10;
+ decimal=decimal+remainder*pow(2,position);
+
+ binary=binary/10;
+ position++;
+}
+printf("decimal number becomes %d",decimal);
+return 0;
 }
